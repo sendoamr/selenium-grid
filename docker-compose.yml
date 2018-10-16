@@ -1,0 +1,11 @@
+
+hub:
+  image: selenium/hub
+firefox:
+  image: selenium/node-firefox
+  links:
+    - hub
+chrome:
+  image: selenium/node-chrome
+  links:
+    - hub
