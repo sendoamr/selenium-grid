@@ -70,6 +70,7 @@ public class App {
                 capability = System.getProperty("remote_browser");
                 switch (capability) {
                     case "firefox":
+                    	capabilities = DesiredCapabilities.firefox();
                         capabilities.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
                         FirefoxProfile ffProfile = new FirefoxProfile();
                         ffProfile.setPreference("javascript.enabled", true);
