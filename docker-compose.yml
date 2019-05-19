@@ -1,11 +1,22 @@
-
-hub:
-  image: selenium/hub
-firefox:
-  image: selenium/node-firefox
-  links:
-    - hub
-chrome:
-  image: selenium/node-chrome
-  links:
-    - hub
+version: "3"
+services:
+  hub:
+    image: selenium/hub
+  firefox:
+    image: selenium/node-firefox
+    links:
+      - hub
+#  firefox-custom:
+#    build: ./firefox
+#    links:
+#      - hub
+#    environment:
+#      - FIREFOX_VERSION=nightly-latest
+  chrome:
+    image: selenium/node-chrome
+    links:
+      - hub
+  front:
+    build: ./front-test
+    ports:
+    - "8080:80"

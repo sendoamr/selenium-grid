@@ -31,5 +31,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Run into docker
 ```
 docker build -t selenium/front .
- docker run -it -p 8080:80 --rm --name selenium-front-1 selenium/front
+docker run -it -p 8080:80 --rm --name selenium-front-1 selenium/front
 ```

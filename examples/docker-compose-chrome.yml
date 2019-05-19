@@ -14,7 +14,7 @@ mvn:
   volumes:
     - ./:/usr/src/mvn-src
   working_dir: /usr/src/mvn-src
-  command: mvn clean install -Durl=https://google.com -Ddriver=hub -Dremote_browser=Chrome
+  command: mvn clean install -Dbrowser=chrome -Durl=https://localhost:8080/ -Dwidth=1024 -Dheight=800
   links:
     - hub
     - firefox

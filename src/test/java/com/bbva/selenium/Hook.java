@@ -1,4 +1,4 @@
-package com.sendoa.selenium;
+package com.bbva.selenium;
 
 import org.junit.After;
 import org.junit.Before;
