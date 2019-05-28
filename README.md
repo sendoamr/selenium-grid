@@ -18,3 +18,9 @@ Run in local mvn clean install -Durl=https://locahost:8080/ -Dbrowser=Chrome -Dw
 
 ## Managment
 To see administration console open: http://{ip-machine}:4444/grid/console
+
+## Scale navigator
+For example for launch 5 instances of chrome:
+```
+docker-compose scale chrome=5
+```
