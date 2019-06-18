@@ -16,9 +16,9 @@ public class DriverUtil {
         switch (browser) {
             case "firefox":
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
-                return new RemoteWebDriver(new URL("http://172.24.0.2:4444/wd/hub"), DesiredCapabilities.firefox());
+                return new RemoteWebDriver(new URL(String.format("http://%s:4444/wd/hub", System.getenv("HOST_HUB"))), DesiredCapabilities.firefox());
             case "chrome":
-                return new RemoteWebDriver(new URL("http://172.24.0.2:4444/wd/hub"), new ChromeOptions());
+                return new RemoteWebDriver(new URL(String.format("http://%s:4444/wd/hub", System.getenv("HOST_HUB"))), new ChromeOptions());
 
         }
         return null;

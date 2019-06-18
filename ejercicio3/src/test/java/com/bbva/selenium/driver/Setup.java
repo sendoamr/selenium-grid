@@ -25,10 +25,10 @@ public class Setup {
             case "firefox":
 
                 System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
-                driver = new RemoteWebDriver(new URL("http://172.24.0.2:4444/wd/hub"), DesiredCapabilities.firefox());
+                driver = new RemoteWebDriver(new URL(String.format("http://%s:4444/wd/hub", System.getenv("HOST_HUB"))), DesiredCapabilities.firefox());
                 break;
             case "chrome":
-                driver = new RemoteWebDriver(new URL("http://172.24.0.2:4444/wd/hub"), new ChromeOptions());
+                driver = new RemoteWebDriver(new URL(String.format("http://%s:4444/wd/hub", System.getenv("HOST_HUB"))), new ChromeOptions());
                 break;
 
         }
