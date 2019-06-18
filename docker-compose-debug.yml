@@ -16,6 +16,14 @@ services:
       - hub
     environment:
       HUB_HOST: hub
+  chrome-debug:
+    image: selenium/node-chrome-debug
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
   hub:
     image: selenium/hub
     ports:
