@@ -11,3 +11,8 @@ mvn clean test -Dbrowser=chrome
 mvn clean test -Dbrowser=firefox
 ```
 ##### 5. See complete report in home-page-html
+
+##### 6. Launch with different resolutions
+ ```
+ mvn clean test -Dbrowser=chrome -Dwidth=1024 -Dheight=800
+ ```
