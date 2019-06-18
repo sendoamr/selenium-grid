@@ -20,7 +20,3 @@ services:
     image: selenium/hub
     ports:
       - "4444:4444"
-  front:
-    build: ./front-test
-    ports:
-      - "8080:80"
